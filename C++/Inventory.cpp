@@ -6,7 +6,7 @@ using namespace std;
 
 ofstream ReadMe ("ReadMe.txt");
 ofstream TestFile ("Test.txt");
-ofstream WriteTest ("WriteTest.txt");
+ofstream WriteTest ("WriteTest.emilia");
 
 void Test() {
   if (ReadMe.is_open())
@@ -29,6 +29,19 @@ void Write() {
   WriteTest.close();
 }
 
+void Read() {
+  string Line;
+  ifstream WriteTest ("WriteTest.emilia");
+  if (WriteTest.is_open())
+  {
+    while (getline(WriteTest,Line))
+    {
+      cout << Line << endl;
+    }
+    WriteTest.close();
+  } else cout << "Unable to open file";
+}
+
 int main () {
   cout << "|- Emilia's Inventory -|" << endl;
   if (TestFile.is_open())
@@ -40,5 +53,6 @@ int main () {
   
   Test();
   Write();
+  Read();
   return 0;
 }
