@@ -42,18 +42,19 @@ void Read() {
   } else cout << "Unable to open file";
 }
 
-void Append() {
+void Append(string filename) {
   string Input;
   int Counter = 0;
-  WriteTest.open("WriteTest.emilia", ios::app);
+  ofstream file(filename.c_str(), ios::app);
   while (Counter < 10) {
    cout << "Type something: ";
    cin >> Input; 
-   WriteTest << Input << endl;
+   file << Input << endl;
    Counter++;
   }
-  WriteTest.close();
+  file.close();
 }
+
 
 int main () {
   cout << "|- Emilia's Inventory -|" << endl;
@@ -67,7 +68,7 @@ int main () {
   Test();
   Write();
   Read();
-  Append();
+  Append("WriteTest");
   Read();
   return 0;
 }
