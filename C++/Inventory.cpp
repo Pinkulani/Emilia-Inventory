@@ -42,6 +42,19 @@ void Read() {
   } else cout << "Unable to open file";
 }
 
+void Append() {
+  string Input;
+  int Counter = 0;
+  WriteTest.open("WriteTest.emilia", ios::app);
+  while (Counter < 10) {
+   cout << "Type something: ";
+   cin >> Input; 
+   WriteTest << Input << endl;
+   Counter++;
+  }
+  WriteTest.close();
+}
+
 int main () {
   cout << "|- Emilia's Inventory -|" << endl;
   if (TestFile.is_open())
@@ -53,6 +66,8 @@ int main () {
   
   Test();
   Write();
+  Read();
+  Append();
   Read();
   return 0;
 }
