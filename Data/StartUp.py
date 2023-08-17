@@ -2,10 +2,10 @@ import platform
 
 class StartUp(object):
     def __init__(self):
-        print("Filesort")
+        print("|- Filespot -|")
     def OSType(self):
         OS = platform.system()
-        print("OS: ", end="")
+        print("OS Type: ", end="")
         match OS:
             case "Darwin":
                 print("macOS")
