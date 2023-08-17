@@ -7,3 +7,6 @@ Start.OSType()
 
 Folders = Folders()
 Folders.Create()
+
+Files = Files()
+Files.List()
