@@ -8,6 +8,8 @@ from Data.Files import Files
 Start = StartUp()
 Folders = Folders()
 Files = Files()
+XD = Files.GetExtension("Website.html")
+print("XD: ", XD)
 
 Filespot = Tk()
 Filespot.title("Filespot")
