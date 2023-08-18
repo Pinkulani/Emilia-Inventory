@@ -13,6 +13,7 @@ class Files(object):
         
         # Test Move
         #shutil.move("CheckParity.py", "../")
+
     def GetExtension(self, File):
         Extension = []
 
@@ -33,3 +34,22 @@ class Files(object):
             ExtensionString += Extension[S]
 
         return ExtensionString
+    
+    def GetType(self, Extension):
+        match Extension:
+            case ".html":
+                return "HTML"
+            case ".py":
+                return "Python"
+            case ".cpp":
+                return "C++"
+            case ".gif":
+                return "Gif"
+            case ".png":
+                return "Picture"
+            case ".jpg":
+                return "Picture"
+            case ".mp4":
+                return "Video"
+            case _:
+                return "Other"
