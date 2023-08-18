@@ -1,9 +1,16 @@
-# Emilia-Inventory
+<h1 align="center"> Filespot </h1>
 
-This is a program to keep track of things without using a primitive Text File to keep track of it.
-I want to automate the task of keeping track of belongings as much as possible.
+<b>macOS</b>
+<ul>
+  <li>brew install python-tk</li>
+</ul>
 
-There are 2 versions that are going to be available.
+<b>Linux (Arch)</b>
+<ul>
+  <li>sudo pacman -S tk</li>
+</ul>
 
-C++ Version: Will create Text Files that store information where it can also be added and read through the Terminal. 
-SQL Version: Database with premade Queries and Tables which can be expanded for any need.
+<b>Linux (Debian)</b>
+<ul>
+  <li>sudo apt-get install python3-tk</li>
+</ul>
