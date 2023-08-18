@@ -8,8 +8,9 @@ from Data.Files import Files
 Start = StartUp()
 Folders = Folders()
 Files = Files()
-XD = Files.GetExtension("Website.html")
-print("XD: ", XD)
+XD = Files.GetExtension("Website.mp4")
+XP = Files.GetType(XD)
+print(XP)
 
 Filespot = Tk()
 Filespot.title("Filespot")
