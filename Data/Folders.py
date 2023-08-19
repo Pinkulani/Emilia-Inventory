@@ -4,7 +4,7 @@ class Folders(object):
     def __init__(self):
         pass
     def Create(self):
-        Folders = ["../Pictures", "../Videos", "../Gifs", "../HTML", "../Python"]
+        Folders = ["../HTML", "../Python", "../C++", "../Gifs", "../Pictures", "../Videos", "../Audios", "../Documents"]
         for X in range(0, len(Folders)):
             if os.path.exists(Folders[X]):
                 print("Folder already exists")
