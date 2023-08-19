@@ -51,18 +51,28 @@ class Files(object):
                 return "Video"
             case _:
                 return "Other"
-            
+
     def Sort(self):
         for L in range(0, len(self.FileList)):
-            Sort = self.GetExtension(self.FileList[L])
-            Sort = self.GetType(Sort)
-
-            # Sort = File Type
-            match Sort:
-                case "Picture":
-                    shutil.move(self.FileList[L], "../Pictures")
-                case "Video":
-                    shutil.move(self.FileList[L], "../Videos")
-                case _:
-                    continue
+            CurrentFile = self.GetExtension(self.FileList[L])
+            CurrentFile = self.GetType(CurrentFile)
             
+            # Reverse Filename
+            Filepath = self.FileList[L][::-1]
+
+            # Add ../ to fetch files from Top Folder
+            Filepath += "/.."
+            
+            # Reverse Filename again to get correct Filepath
+            Filepath = Filepath[::-1]
+            
+            # Current File = File Type
+            match CurrentFile:
+                case "Picture":
+                    shutil.move(Filepath, "../Pictures")
+                case "Video":
+                    shutil.move(Filepath, "../Videos")
+                case "Python":
+                    shutil.move(Filepath, "../Python")
+                case _: # Don't move Folders
+                    continue
