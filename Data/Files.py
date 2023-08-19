@@ -47,6 +47,8 @@ class Files(object):
                 return "Picture"
             case ".jpg":
                 return "Picture"
+            case ".jpeg":
+                return "Picture"
             case ".mp4":
                 return "Video"
             case _:
@@ -74,5 +76,7 @@ class Files(object):
                     shutil.move(Filepath, "../Videos")
                 case "Python":
                     shutil.move(Filepath, "../Python")
+                case "Gif":
+                    shutil.move(Filepath, "../Gifs")
                 case _: # Don't move Folders
                     continue
