@@ -51,6 +51,14 @@ class Files(object):
                 return "Picture"
             case ".mp4":
                 return "Video"
+            case ".mp3":
+                return "Audio"
+            case ".flac":
+                return "Audio"
+            case ".pdf":
+                return "Document"
+            case ".pages":
+                return "Document"
             case _:
                 return "Other"
 
@@ -70,13 +78,21 @@ class Files(object):
             
             # Current File = File Type
             match CurrentFile:
+                case "HTML":
+                    shutil.move(Filepath, "../HTML")
+                case "Python":
+                    shutil.move(Filepath, "../Python")
+                case "C++":
+                    shutil.move(Filepath, "../C++")
+                case "Gif":
+                    shutil.move(Filepath, "../Gifs")
                 case "Picture":
                     shutil.move(Filepath, "../Pictures")
                 case "Video":
                     shutil.move(Filepath, "../Videos")
-                case "Python":
-                    shutil.move(Filepath, "../Python")
-                case "Gif":
-                    shutil.move(Filepath, "../Gifs")
-                case _: # Don't move Folders
+                case "Audio":
+                    shutil.move(Filepath, "../Audios")
+                case "Document":
+                    shutil.move(Filepath, "../Documents")
+                case _: # Don't move Folders or OS files
                     continue
