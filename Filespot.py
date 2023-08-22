@@ -30,5 +30,7 @@ ttk.Button(Frame, text = "").grid(column = 2, row = 2)
 
 ttk.Button(Frame, text = "CD", command=lambda: Explorer.ChangeDirectory()).grid(column = 1, row = 3)
 ttk.Button(Frame, text = "Get Directory", command=lambda: Explorer.GetDirectory()).grid(column = 2, row = 3)
+ttk.Button(Frame, text = "List Files", command=lambda: Explorer.List()).grid(column = 1, row = 4)
+ttk.Button(Frame, text = "CD ..", command=lambda: Explorer.GetLastSection()).grid(column = 2, row = 4)
 
 Filespot.mainloop()
